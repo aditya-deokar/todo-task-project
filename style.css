@@ -1,88 +1,110 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* 168  */
+  --hue: 200;
+  --primary: hsl(var(--hue), 76%, 36%);
+  --primary-light: hsl(var(--hue), 76%, 56%);
+  --primary-super-light: hsl(var(--hue), 36%, 95%);
 }
 
-body,html{
-    width: 100%;
-    height: 100%;
-    font-family: sans-serif;
+body {
+  font-family: "Nunito Sans", sans-serif;
+  padding-top: 1rem;
 }
+.container {
+  max-width: 900px;
+  width: 90%;
+  margin: auto;
+}
+.heading {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+.form {
+  border: 0.5px solid var(--primary);
+  display: flex;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-super-light);
+  height: 64px;
+  align-items: center;
+  border-radius: 0.5rem;
 
-main{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(29, 25, 25);
-    padding: 5vw;
-    gap: 1vw;
-
+  /* gap: 1rem; */
 }
-
-
-.inputscontainer{
-    width: 55%;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
+.todo-title-input {
+  width: 90%;
+  height: 70%;
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  outline: none;
 }
-.inputscontainer input{
-    width: 80%;
-    padding: 1vw 0.6vw;
-    border: 1px solid #dadada;
-    font-size: 1rem;
-    
+.todo-form-button {
+  width: 10%;
+  height: 70%;
+  background-color: var(--primary);
+  color: var(--primary-super-light);
+  border: none;
+  font-size: 1.2rem;
+  font-family: inherit;
+  border-radius: 0.3rem;
 }
-.inputscontainer button{
-    width: 18%;
-    padding: 1vw 0.6vw;
-    border: 1px solid #dadada;
-    background-color: rgb(94, 224, 179);
-    font-size: 1.2rem;
-    color: #fff;
-    font-weight: 600;
+.todos {
+  margin-top: 1rem;
 }
-
-.container{
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-    gap: .3vw;
-
+.todo {
+  background-color: var(--primary);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  height: 42px;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.3rem;
 }
-.element{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    color: #fff;
-    background-color: rgb(73, 177, 141);
-    border-radius: 4px;
-    gap: 1vw;
-    padding: 0.9vw 1vw;
-
+.toggle-delete {
+  display: flex;
+  /* border: 2px solid green; */
+  gap: 1rem;
 }
-.element h4{
-    width: 60%;
-    text-transform: capitalize;
-    font-size: 1rem;
+.delete-todo-button {
+  font-family: inherit;
+  font-weight: bold;
+  width: 20px;
+  padding: 0 1rem;
+  font-size: 1.4rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
-.complete{
-    opacity: 0.3;
-    text-decoration:line-through;
+.todo-checkbox {
+  /* height: 60px; */
+  width: 20px;
+  outline: none;
+  border: none;
+  accent-color: white;
 }
-.checkcontainer{
-    display: flex;
-    gap:1vw;
+.todo-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-super-light);
+  text-transform: capitalize;
 }
-.element span{
-    cursor: pointer;
-}
-h1{
-    font-size: 5vw;
-    text-transform: uppercase;
-    color: rgb(118, 170, 152);
+.completed {
+  text-decoration: line-through;
+  opacity: 0.8;
 }
