@@ -1,35 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="App.js" type="module"></script>
-</head>
-<body>
-    <main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer type="module"></script>
+  </head>
 
-        <h1>to do list</h1>
-        <div class="inputscontainer">
-            <input type="text" placeholder="todo title">
-            <button>Add</button>
-        </div>
-
-        <div class="container">
-            <div class="element" data-id="1">
-                <h4 class="title complete">title1</h4>
-                <div class="checkcontainer">
-                    <input type="checkbox" name="completed" id="">
-                    <span class="clear">clear</span>
-                </div>
-               
-            </div>
-           
-        </div>
-    </main>
-
-    
-    
-</body>
+  <body>
+    <h1 class="heading">Todo List</h1>
+    <form id="form" class="form container">
+      <input
+        type="text"
+        id="todo-title-input"
+        class="todo-title-input"
+        placeholder="Todo title"
+      />
+      <button type="submit" class="todo-form-button">Add</button>
+    </form>
+    <ul class="todos container"></ul>
+  </body>
 </html>
