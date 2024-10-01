@@ -1,23 +1,24 @@
-import store from  "./store.js";
+import store from "./store.js";
 
+function render() {
+  const todos = document.querySelector(".todos");
 
-function render(){
-    var container=document.querySelector(".container");
-   
-  
-
-
-    var newStore=store.todos.map(todo=>`<div class="element" data-id="${todo.id}">
-                <h4 class="title ${todo.complete? "complete":""}">${todo.title}</h4>
-                <div class="checkcontainer">
-                    <input type="checkbox" name="completed" id="" ${todo.complete?"checked":""}>
-                    <span class="clear">clear</span>
-                </div>
-               
-            </div>`).join("");
-
-    // console.log(newStore);        
-    container.innerHTML=newStore;
+  const todoElements = store.todos
+    .map(
+      (todo) => `<li class="todo" data-id=${todo.id}>
+<span class="todo-title ${todo.completed ? "completed" : ""}"> ${
+        todo.title
+      } </span>
+<div class="toggle-delete">
+  <input type="checkbox" name="completed" class="todo-checkbox" ${
+    todo.completed ? "checked" : ""
+  } />
+  <button class="delete-todo-button">x</button>
+</div>
+</li>`
+    )
+    .join("");
+  todos.innerHTML = todoElements;
 }
 
 export default render;

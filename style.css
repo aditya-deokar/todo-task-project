@@ -6,7 +6,7 @@
 }
 :root {
   /* 168  */
-  --hue: 200;
+  --hue: 169;
   --primary: hsl(var(--hue), 76%, 36%);
   --primary-light: hsl(var(--hue), 76%, 56%);
   --primary-super-light: hsl(var(--hue), 36%, 95%);
@@ -48,7 +48,8 @@ body {
   outline: none;
 }
 .todo-form-button {
-  width: 10%;
+  width: fit-content;
+  padding: 2px 6px;
   height: 70%;
   background-color: var(--primary);
   color: var(--primary-super-light);
